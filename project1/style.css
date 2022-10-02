@@ -1,0 +1,119 @@
+html, body, body2 {
+  height: 100%;
+  width: 100%;
+}
+body {
+ background-image: url("https://images6.alphacoders.com/107/1072679.jpg");
+ background-color: #cccccc;
+  height: 100%;
+  width: 100%;
+ 
+  
+}
+.mainheader { 
+  font-size: 70px;
+  letter-spacing: 3px;
+  font-family: impact;
+  text-align: center;
+  color: #fd4664;
+  background: rgb(38, 38, 38, 0.8);
+  border-style: solid;
+  border-color: #f94466;
+  -webkit-text-stroke-width: 1.5px;
+  -webkit-text-stroke-color: #561a1a;
+  
+}
+.val_info {
+  font-size: 25px;
+  font-family: arial;
+  padding: 24px;
+  color: #fb4565;
+  background: rgb(38, 38, 38, 0.8);
+  border-style: solid;
+  border-color: #f94466;
+  text-shadow: 2px 2px black;
+  
+
+  
+  
+  
+}
+.pagelinks {
+  background: rgb(38, 38, 38, 0.8);
+  font-size: 18px;
+  font-family: arial;
+  padding: 24px;
+  color: #fb4565;
+  border-style: solid;
+  border-color: #f94466;
+  text-shadow: 2px 2px black;
+
+}
+ .mainpage {
+  display: grid;
+  grid-template-columns: 30% 25% 40%;
+  grid-gap: 30px;
+  padding-left: 5%;
+  padding-right: 5%;
+}
+.kayo {
+  width: 718px;
+  height: 404px;
+   
+  
+}
+a:link {
+  background-color: #f94466;
+  text-decoration: none;
+  color: black;
+  text-shadow: none;
+}
+
+a:visited {
+  background-color: #985d5d;
+  text-decoration: none;
+  color: black;
+  text-shadow: none;
+}
+
+a:hover {
+  background-color: #fd6d8a;
+  text-decoration: none;
+  text-shadow: none;
+}
+
+table, th, td {
+  background: rgb(38, 38, 38, 0.7);
+  font-size: 20px;
+  font-family: arial;
+  padding: 24px;
+  color: #fb4565;
+  border-color: #f94466;
+  border: 2px solid;
+  margin-top: 10%;
+  margin-right: 20%;
+  margin-left: 2%;
+}
+.body2 {
+  background-image: url("https://cdnportal.mobalytics.gg/production/2021/03/793161f1-kayo-agent-select.jpg");
+  background-color: gray;
+}
+.body3 {
+  background-image: url("https://cdn1.dotesports.com/wp-content/uploads/2021/07/06062152/Valorants-sunny-new-map-Breeze-is-out-now.jpg");
+}
+.list {
+  background: rgb(38, 38, 38, 0.7);
+  font-size: 30px;
+  font-family: arial;
+  padding: 24px;
+  color: #fb4565;
+  border-color: #f94466;
+  border: 2px solid;
+  margin-top: 5%;
+  margin-right: 20%;
+  margin-left: 2%;
+  width: 900px
+}
+li {
+  margin: 15px 0;
+}
