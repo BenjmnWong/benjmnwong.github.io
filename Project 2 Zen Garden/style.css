@@ -1,0 +1,127 @@
+body {
+ background-image: url("https://wallpaperaccess.com/full/424833.jpg");
+ background-color: #cccccc;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  
+  
+ 
+}
+.page-wrapper {
+  
+  margin: 40px;
+  display: grid;
+  padding: 50px;
+  grid-template-columns: 700px auto;
+  grid-template-rows: 450px 1400;
+  grid-template-areas: 
+      "head top"
+      "left body";
+
+  
+}
+a:link {
+  color: #30c6f8;
+}
+a:visted {
+  color: #a271fe
+}
+a:hover {
+  color:#80fdff;
+  background: #ededed;
+}
+.design-selection {
+  border: 10px solid rgba(0, 0, 90, 0.7);
+  background-color: rgba(255, 255, 255, 0.6);
+  grid-area: left;
+  padding: 20px;
+  font-family: "Arial";
+  margin: 8px;
+  
+  
+}
+.intro {
+  background: white;
+  border: 10px solid rgba(0, 0, 90, 0.7);
+  background-color: rgba(255, 255, 255, 0.6);
+  padding: 20px;
+  margin: 8px;
+  
+  
+  grid-area: head;
+  font-family: "Verdana";
+}
+.preamble {
+  border: 10px solid rgba(0, 0, 90, 0.7);
+  background-color: rgba(255, 255, 255, 0.6);
+  font-family: "Arial";
+  padding: 20px;
+  margin: 8px;
+}
+.summary {
+  border: 10px solid rgba(0, 0, 90, 0.7);
+  background-color: rgba(255, 255, 255, 0.6);
+  font-family: "Arial";
+  margin: 8px;
+  
+  
+}
+#zen-supporting {
+  border: 10px solid rgba(0, 0, 90, 0.7);
+  background-color: rgba(255, 255, 255, 0.6);
+  grid-area: body;
+  padding: 20px;
+  font-family: "Arial";
+  margin: 8px;
+}
+.wrapper{
+  border: 10px solid rgba(0, 0, 90, 0.7);
+  background-color: rgba(255, 255, 255, 0.6);
+  grid-area: left;
+  font-family: "Arial";
+  padding: 20px;
+  margin: 8px;
+ 
+}
+.design-archives{
+  border: 10px solid rgba(0, 0, 90, 0.7);
+  background-color: rgba(255, 255, 255, 0.6);
+  grid-area: left;
+  padding: 20px;
+  font-family: "Arial";
+  margin: 8px;
+}
+.zen-resources{
+  border: 10px solid rgba(0, 0, 90, 0.7);
+  background-color: rgba(255, 255, 255, 0.6);
+  grid-area: left;
+  padding: 20px;
+  font-family: "Arial";
+  margin: 8px;
+}
+div.page-wrapper::before {
+  border: 10px solid rgba(0, 0, 90, 0.7);
+  background-color: rgba(255, 255, 255, 0.6);
+  content:url(https://www.bestsurfdestinations.com/wp-content/uploads/2021/03/Surfing-Portugal.jpg); 
+  grid-area: top;
+  padding: 20px;
+  margin: 8px;
+  
+  
+}
+h1 {
+  font-size: 45pt;
+  font-family: times new roman;
+  font-style: italic;
+}
+h2 {
+  font-size: 30pt;
+  font-family: times new roman;
+  font-style: italic;
+}
+h3 {
+  font-size: 20pt;
+  font-family: times new roman;
+  font-style: italic
+}
