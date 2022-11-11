@@ -1,0 +1,152 @@
+<html>
+  <head>
+    <canvas id="myCanvas" width="500" height="270"></canvas>
+    <link href="style.css" rel="stylesheet">
+    <script>
+      // create canvas and context variables
+      var canvas = document.getElementById("myCanvas");
+      var context = canvas.getContext("2d");
+      var titleY = 0;
+      
+      
+      window.requestAnimationFrame(drawFrame);
+      // function that draws the title each frame
+      function drawFrame() { 
+        context.clearRect(0, 0, canvas.width, canvas.height);
+        context.save();
+        context.beginPath();
+        context.font = "35pt Impact";
+        context.textAlign = "center";
+        context.strokeStyle = "white";
+        context.lineWidth = 1.5;
+        context.strokeText("Minecraft Pickaxe Graph", canvas.width / 2, titleY);
+        context.restore()
+        // until the Y axis reaches 200, the frame is cleared and redrawn with an incriment 
+        titleY++;
+         if (titleY < 200) {
+            window.requestAnimationFrame(drawFrame);
+         }
+      }
+      
+    </script>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+      // google's preset data layout
+      google.charts.load("current", {packages:["corechart"]});
+      google.charts.setOnLoadCallback(drawChart);
+      function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+          ['Pickaxe Type', 'Speed', 'Durability'],
+          ['Hand',      1,    null],
+          ['Wood',     2,   60],
+          ['Stone',      4,    132],
+          ['Gold',      12,    33],
+          ['Iron',      6,    251],
+          ['Diamond',    8,    1562]
+        ]);   
+        
+      var space = 0
+      // visual options for the chart
+        var options = {
+          title: '',
+          pieHole: 0.0,
+          slices: {  0: {color: 'black'},
+                   1: {color: 'SaddleBrown'},
+                   2: {color: 'grey'},
+                   3: {color: 'gold'},
+                   4: {color: 'lightgrey'},
+                   5: {color: 'lightblue'},
+          
+          is3D: false,
+          legend: 'none',
+           
+          }
+      
+        };
+      
+      
+      // assigning variables for the html buttons
+      var donut= document.getElementById("donutbtn")
+      var pie = document.getElementById("piebtn")
+      var line = document.getElementById("linebtn")
+      var scat = document.getElementById("scatbtn")
+      // function to make a donut chart
+      function makedonut(){
+        // sets the chart variable
+        var chart = new google.visualization.PieChart(document.getElementById('donutchart'));
+        options.title = "Pickaxe Mining Speed Multiplier (higher is better)"
+        options.pieHole = .60;
+        options.is3D = false,
+        space = 0,
+        // draws the chart with the data and options variables
+        chart.draw(data, options)
+        
+      }
+      
+      // function to make a pie chart
+      function makepie() {
+        // sets the chart variable
+        var chart = new google.visualization.PieChart(document.getElementById('donutchart'));
+        options.title = "Pickaxe Mining Speed Multiplier (higher is better)"
+        options.pieHole = .0,
+        space = 3
+        options.is3D = true,
+        // draws the chart with the data and options variables
+        chart.draw(data, options)
+        
+      }
+      function makeline() {
+        // sets the chart variable
+        var chart = new google.visualization.LineChart(document.getElementById('donutchart'));
+        options.title = "Pickaxe Durability (higher is better)"
+        options.is3D = false,
+        space = 0
+        // draws the chart with the data and options variables
+        chart.draw(data, options)
+      }
+      function makescat() {
+        // sets the chart variable
+        var chart = new google.visualization.ScatterChart(document.getElementById('donutchart'));
+        options.title = "Pickaxe Durability (higher is better)"
+        options.is3D = false,
+        space = 0
+        // draws the chart with the data and options variables
+        chart.draw(data, options)
+      }
+        // makes an event listener to call the functions for each type of graph when the respective button is clicked //
+      donut.addEventListener("click", function(){
+        makedonut()
+      });
+      pie.addEventListener("click", function(){
+        makepie()
+      })
+      line.addEventListener("click", function(){
+        makeline()
+      })
+      scat.addEventListener("click", function(){
+        makescat()
+      })
+      }
+        
+      
+      
+    </script>
+    
+  </head>
+  <body>
+    <!--buttons to change which chart and information you want to see-->
+    <button value="Donut Chart" id="donutbtn">Donut</button>
+    <button value="Pie Chart" id="piebtn">Pie</button>
+    <button value="Line Chart" id="linebtn">Line</button>
+    <button value="Scatter Chart" id="scatbtn">Scatter</button>
+    <p id="text">
+      You can change the type of graph and information displayed by clicking the buttons above!
+      </p>
+    <br>
+  
+    
+    
+    <div id="donutchart" style="width: 900px; height: 500px; justify-content: center;"></div>
+    
+  </body>
+</html>
