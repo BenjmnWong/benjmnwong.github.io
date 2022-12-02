@@ -1,0 +1,54 @@
+
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>replit</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+  <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    
+</head>
+
+<body>
+  
+  <h1>Welcome To The Pet Fox Generator!</h1>
+    <div class="intro">
+      <p class ="content">"Foxes are small to medium-sized, omnivorous mammals belonging to several genera of the family Canidae. They have a flattened skull, upright triangular ears, a pointed, slightly upturned snout, and a long bushy tail (or brush)." - Wikipedia </p>
+      <p class ="content">"Foxes live on every continent except Antarctica. The most common and widespread species of fox is the red fox (Vulpes vulpes) with about 47 recognized subspecies" - Wikipedia </p>
+      <p class ="content">On this page, you can enter a name to generate a pet fox! Simply enter a name and click generate. You will be able to see where it's from out of the selected countries (note this isn't every possible country that you can find foxes). Clicking the button also generates an image of your new fox (if you're unsure which fox is yours due to there being multiple in the picture, just pick whichever one you like the most). You can also learn more about your fox with the generated characteristics!</p>
+      
+    </div>
+  <div class="grid">
+    
+    <div class="naming">
+      <p>Enter the name for your new fox:</p>
+      <input type="text" id="name"></input>
+      <br>
+      <input type="button" id="btn" value="Click to make a fox!"></input>
+      <p id='foxname'></p>
+      <ul>
+        <li id = location></li>
+        <li id='color'></li>
+        <li id='climate'></li>
+        <li id='personality'></li>
+      </ul>
+    </div>
+    
+    <div class="image">
+    <img src='' id="image" alt="click the button to generate a fox here!"></img>
+    </div>
+    <div id="regions_div"></div>
+  </div>
+  <script src="script.js"></script>
+  <div>
+  <canvas id="myChart"></canvas>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+
+</body>
+
+</html>

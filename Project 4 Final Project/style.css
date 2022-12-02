@@ -1,0 +1,74 @@
+html, body {
+  height: 100%;
+  width: 99.7%;
+/* image from google images */
+  background-image: url("https://cdn.mos.cms.futurecdn.net/y7Hj6BzWmxVNsdrHXq5cAa.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+h1 {
+/* image from gogle images */
+  font-size: 400%;
+  font-family: helvetica;
+  background-image: url("https://media.istockphoto.com/id/119145145/vector/seamless-texture-of-a-grass.jpg?s=612x612&w=0&k=20&c=Q80xWqRWSQqg-378-l3NuVU5NA8mkrNjoe021OjF9ac=");
+  background-position: center;
+  height: 180px%;
+}
+.content {
+  margin-left: 100px;
+  /*image from gogle images*/
+  background-image: url("https://media.istockphoto.com/id/119145145/vector/seamless-texture-of-a-grass.jpg?s=612x612&w=0&k=20&c=Q80xWqRWSQqg-378-l3NuVU5NA8mkrNjoe021OjF9ac=");
+  background-position: center;
+  font-family: arial;
+  color: black;
+  width: 905px;
+  font-size: 25px;
+  padding: 1%;
+}
+
+
+.grid {
+ 
+   display: grid;
+   grid-template-columns: 20% 33% auto;
+   max-height: 500px;
+}
+
+.grid > div {
+   text-align: center;
+   background: rgba(100, 150, 100, 0.4);
+   border: 3px solid green;
+   max-height: 500px;
+}
+
+#image {
+
+  max-width: 500px;
+  max-height: 500px;
+  width: auto;
+  height: auto;
+}
+
+.naming {
+  
+  font-size: 24px;
+  font-family: arial;
+}
+#btn {
+  background-color: rgb(250, 150, 110);
+}
+#btn:active {
+  background-color: rgb(200, 100, 70);
+}
+#color, #climate, #personality {
+  padding-right: 10px;
+}
+
+#foxname {
+  font-weight: bold;
+}
+#regions_div {
+  height: 500px;
+}
